@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        
+        <script type="text/Javascript">
+            
+            function getdays()
+            {
+                var a = new Date(document.getElementById("today_date").value);
+                var b = new Date(document.getElementById("birth_date").value);
+                return parseInt((a-b)/(24*3600*1000))
+            }
+            
+            function cal()
+            {
+                if(document.getElementById("today_date"))
+                {
+                    document.getElementById("c").value=getdays();
+                }
+                
+            }
+            
+            
+        </script>
+    </head>
+    <body>
+    
+    
+    <form name="f1">
+        
+        
+        
+        
+       Today's Date:- <input type="date" id="today_date"><br><br>
+        
+        
+       Birth Date:- <input type="date" id="birth_date" onchange="cal()"><br><br>
+       
+       
+       Number of Days:- <input type="text" id="c">
+        
+        
+        
+        
+        
+        
+        
+    </form>
+    
+    
+        
+    </body>
+</html>
